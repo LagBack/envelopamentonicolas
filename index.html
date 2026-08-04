@@ -149,6 +149,7 @@
     overflow:hidden;
     display:flex;align-items:center;justify-content:center;
   }
+  .car-scene img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:26px;}
   .car-scene::after{
     content:'';position:absolute;inset:0;
     background:repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 2px, transparent 2px 26px);
@@ -264,10 +265,10 @@
   .rev-track::-webkit-scrollbar-thumb{background:var(--steel);border-radius:10px;}
   .rev-card{
     scroll-snap-align:start;flex:0 0 320px;background:var(--charcoal);border:1px solid var(--steel-soft);
-    border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:14px;
+    border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:14px;overflow:hidden;
   }
   .rev-head{display:flex;align-items:center;gap:12px;}
-  .rev-avatar{width:38px;height:38px;border-radius:50%;background:var(--steel);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--chrome);flex:none;}
+  .rev-avatar{border-radius:50%;}
   .rev-name{font-size:13.5px;font-weight:600;}
   .rev-handle{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--paper-dim);}
   .rev-card p{font-size:14px;line-height:1.6;color:var(--paper-dim);margin:0;flex:1;}
@@ -383,19 +384,10 @@
 
       <div data-reveal>
         <div class="car-scene" id="carScene">
-          <svg viewBox="0 0 512 300" aria-hidden="true">
-            <g class="wheel-tire"><circle cx="150" cy="222" r="46"/><circle cx="390" cy="222" r="46"/></g>
-            <g class="wheel-hub"><circle cx="150" cy="222" r="20"/><circle cx="390" cy="222" r="20"/></g>
-            <path class="car-grey" d="M18,208 C15,190 26,176 45,172 L92,164 L138,110 C148,98 163,91 179,91 L333,91 C349,91 364,98 374,110 L420,164 L467,172 C486,176 497,190 494,208 C492,222 480,232 465,232 L440,232 C440,206 419,185 393,185 C367,185 346,206 346,232 L166,232 C166,206 145,185 119,185 C93,185 72,206 72,232 L47,232 C32,232 20,222 18,208 Z"/>
-            <path class="car-window" d="M150,110 L184,100 L328,100 L362,110 L344,110 L318,102 L194,102 L168,110 Z"/>
-            <g class="peel-mask" id="peelMask">
-              <path class="car-color" d="M18,208 C15,190 26,176 45,172 L92,164 L138,110 C148,98 163,91 179,91 L333,91 C349,91 364,98 374,110 L420,164 L467,172 C486,176 497,190 494,208 C492,222 480,232 465,232 L440,232 C440,206 419,185 393,185 C367,185 346,206 346,232 L166,232 C166,206 145,185 119,185 C93,185 72,206 72,232 L47,232 C32,232 20,222 18,208 Z"/>
-            </g>
-          </svg>
-          <div class="sheen"></div>
+          <img src="assets/img2.png" alt="Envelopamento completo da Casa do Nicolas" loading="lazy">
           <div class="scene-caption">
-            <span><span class="dot-live"></span>envelopamento em andamento</span>
-            <span>satin tangerine</span>
+            <span><span class="dot-live"></span>foto real</span>
+            <span>pronto para entrega</span>
           </div>
         </div>
       </div>
@@ -518,17 +510,18 @@
       <div class="rev-track" data-reveal>
         <div class="rev-card">
           <div class="rev-head">
-            <div class="rev-avatar">CS</div>
+            <img class="rev-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjVVI1BjFbJ_5zpwmhgsOJQNZyKNEJj-Lh1DLeRGZX5PL_y-Cndc=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
             <div><div class="rev-name">cliente_satisfeito</div><div class="rev-handle">Avaliação do Google</div></div>
           </div>
           <div class="stars">★★★★★</div>
           <p>Cara que serviço nota 10, faltam palavras pra agradecer. Super atencioso, entregou tudo em 2 dias e ainda mandou um polimento de brinde. Preço super honesto.</p>
+          <img src="assets/img1.png" alt="Envelopamento realizado pela Casa do Nicolas" loading="lazy" style="border-radius:10px;margin-top:4px;width:100%;display:block;">
           <div class="rev-badge">✓ visitou o local</div>
         </div>
 
         <div class="rev-card">
           <div class="rev-head">
-            <div class="rev-avatar">JP</div>
+            <img class="rev-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjW4DR5mykj55E2f4PeYO0yp3BloNpKP11cVpHzWw1eJq0I7bok0PQ=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
             <div><div class="rev-name">jp_itu</div><div class="rev-handle">Avaliação do Google</div></div>
           </div>
           <div class="stars">★★★★★</div>
@@ -538,7 +531,7 @@
 
         <div class="rev-card">
           <div class="rev-head">
-            <div class="rev-avatar">RM</div>
+            <img class="rev-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjXb8t1ZzazJvPoYn2FgYEUrMdEVU8nAEF3mYKC8QVw9oyMmU8YB=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
             <div><div class="rev-name">rmotors_go</div><div class="rev-handle">Avaliação do Google</div></div>
           </div>
           <div class="stars">★★★☆☆</div>
@@ -701,16 +694,6 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
-
-  // hero peel-in animation (runs once on load)
-  const peelMask = document.getElementById('peelMask');
-  requestAnimationFrame(() => {
-    peelMask.style.clipPath = 'inset(0 0 0 100%)';
-    setTimeout(() => {
-      peelMask.style.transition = 'clip-path 1.8s cubic-bezier(.16,.84,.32,1)';
-      peelMask.style.clipPath = 'inset(0 0 0 0%)';
-    }, 350);
-  });
 
   // before/after draggable slider
   const baCompare = document.getElementById('baCompare');
