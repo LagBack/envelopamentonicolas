@@ -149,7 +149,18 @@
     overflow:hidden;
     display:flex;align-items:center;justify-content:center;
   }
-  .car-scene img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:26px;}
+
+  /* flip portrait phone photos to landscape orientation */
+  .car-scene .portrait-wrap{
+    position:relative;overflow:hidden;border-radius:26px;
+    width:100%;height:86.5%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .car-scene .portrait-wrap img{
+    width:100%;aspect-ratio:3/4;display:block;
+    transform:rotate(-90deg);
+    transform-origin:left center;
+  }
   .car-scene::after{
     content:'';position:absolute;inset:0;
     background:repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 2px, transparent 2px 26px);
@@ -268,7 +279,8 @@
     border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:14px;overflow:hidden;
   }
   .rev-head{display:flex;align-items:center;gap:12px;}
-  .rev-avatar{border-radius:50%;}
+  .rev-avatar{width:38px;height:38px;border-radius:50%;background:var(--steel);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--chrome);flex:none;}
+  .rev-photo{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:none;display:block;}
   .rev-name{font-size:13.5px;font-weight:600;}
   .rev-handle{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--paper-dim);}
   .rev-card p{font-size:14px;line-height:1.6;color:var(--paper-dim);margin:0;flex:1;}
@@ -384,7 +396,7 @@
 
       <div data-reveal>
         <div class="car-scene" id="carScene">
-          <img src="assets/img2.png" alt="Envelopamento completo da Casa do Nicolas" loading="lazy">
+          <div class="portrait-wrap"><img src="assets/img2.png" alt="Envelopamento completo da Casa do Nicolas" loading="lazy"></div>
           <div class="scene-caption">
             <span><span class="dot-live"></span>foto real</span>
             <span>pronto para entrega</span>
@@ -510,7 +522,7 @@
       <div class="rev-track" data-reveal>
         <div class="rev-card">
           <div class="rev-head">
-            <img class="rev-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjVVI1BjFbJ_5zpwmhgsOJQNZyKNEJj-Lh1DLeRGZX5PL_y-Cndc=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
+            <img class="rev-photo" src="https://lh3.googleusercontent.com/a-/ALV-UjVVI1BjFbJ_5zpwmhgsOJQNZyKNEJj-Lh1DLeRGZX5PL_y-Cndc=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
             <div><div class="rev-name">cliente_satisfeito</div><div class="rev-handle">Avaliação do Google</div></div>
           </div>
           <div class="stars">★★★★★</div>
@@ -521,7 +533,7 @@
 
         <div class="rev-card">
           <div class="rev-head">
-            <img class="rev-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjW4DR5mykj55E2f4PeYO0yp3BloNpKP11cVpHzWw1eJq0I7bok0PQ=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
+            <img class="rev-photo" src="https://lh3.googleusercontent.com/a-/ALV-UjW4DR5mykj55E2f4PeYO0yp3BloNpKP11cVpHzWw1eJq0I7bok0PQ=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
             <div><div class="rev-name">jp_itu</div><div class="rev-handle">Avaliação do Google</div></div>
           </div>
           <div class="stars">★★★★★</div>
@@ -531,7 +543,7 @@
 
         <div class="rev-card">
           <div class="rev-head">
-            <img class="rev-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjXb8t1ZzazJvPoYn2FgYEUrMdEVU8nAEF3mYKC8QVw9oyMmU8YB=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
+            <img class="rev-photo" src="https://lh3.googleusercontent.com/a-/ALV-UjXb8t1ZzazJvPoYn2FgYEUrMdEVU8nAEF3mYKC8QVw9oyMmU8YB=w72-h72-p-rp-mo-br100" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;display:block;">
             <div><div class="rev-name">rmotors_go</div><div class="rev-handle">Avaliação do Google</div></div>
           </div>
           <div class="stars">★★★☆☆</div>
