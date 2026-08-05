@@ -149,17 +149,15 @@
     overflow:hidden;
     display:flex;align-items:center;justify-content:center;
   }
-
-  /* flip portrait phone photos to landscape orientation */
-  .car-scene .portrait-wrap{
-    position:relative;overflow:hidden;border-radius:26px;
-    width:100%;height:86.5%;
-    display:flex;align-items:center;justify-content:center;
+  /* flip portrait phone photos to landscape */
+  .car-scene .flip{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   }
-  .car-scene .portrait-wrap img{
-    width:100%;aspect-ratio:3/4;display:block;
+  .car-scene .flip img{
+    width:86%;height:auto;
     transform:rotate(-90deg);
-    transform-origin:left center;
+    transform-origin:center center;
+    object-fit:none;
   }
   .car-scene::after{
     content:'';position:absolute;inset:0;
@@ -396,7 +394,7 @@
 
       <div data-reveal>
         <div class="car-scene" id="carScene">
-          <div class="portrait-wrap"><img src="assets/img2.png" alt="Envelopamento completo da Casa do Nicolas" loading="lazy"></div>
+          <div class="flip"><img src="assets/img2.png" alt="Envelopamento completo da Casa do Nicolas" loading="lazy"></div>
           <div class="scene-caption">
             <span><span class="dot-live"></span>foto real</span>
             <span>pronto para entrega</span>
